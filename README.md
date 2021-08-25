@@ -14,4 +14,12 @@
 
   1. NLP = NLU(语义理解) + NLG(语言生成)
   
-  2. 
+## 004 机器翻译
+
+   1. 统计机器翻译
+
+![1.png](https://github.com/budaLi/jd_nlp/imgs/统计机器翻译_1.jpg)
+
+
+
+

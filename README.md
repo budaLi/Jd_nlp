@@ -38,14 +38,14 @@
 
    3.
 
-       3.1 语言模型(language model)
-           给定一句英文e,计算概率P(e)
-           如果是符合英文语法的，p(e)高，如果是随机语句，p(e)低
-       3.2 翻译模型（词典）
-           给定一对<c,e>,计算p(c|e),c指的是中文，e指的是英文。
-           语义相似度高则p(c|e)高，语义相似度低则p(c|e)低
-       3.3 Decoding Algorithm（Viterbi）
-           给定语言模型，翻译模型和f,找出最优的使得p(e)p(c|e)最大
+           3.1 语言模型(language model)
+               给定一句英文e,计算概率P(e)
+               如果是符合英文语法的，p(e)高，如果是随机语句，p(e)低
+           3.2 翻译模型（词典）
+               给定一对<c,e>,计算p(c|e),c指的是中文，e指的是英文。
+               语义相似度高则p(c|e)高，语义相似度低则p(c|e)低
+           3.3 Decoding Algorithm（Viterbi）
+               给定语言模型，翻译模型和f,找出最优的使得p(e)p(c|e)最大
 
    4. 语言模型
 
@@ -53,10 +53,14 @@
        P(he is studing ai) > P(he studing is ai)
 
        也就是需要给出"he is studing ai"是句子的概率大于"he studing is ai"的概率，那么是如何计算的：
-       Unigram: P(he is studing ai) = P(he) * P(is) * P(studing) * P(ai)   假设每个单词是独立的
-       Bigram: (he is studing ai) = P(he) * P(is|he) * P(studing|is) * P(ai|studing)   假设当前单词只考虑与前一个单词相关
-       Trigram: P(he is studing ai) = P(he) * p(is|he) * p(studing|he is) * P(ai| is studing)  假设当前单词与前两个单词相关
-       N-gram        由Unigram、Bigram、Trigram可以延伸至N-gram,其中前三者是为了简化计算而假设得到的计算
+           
+           Unigram: P(he is studing ai) = P(he) * P(is) * P(studing) * P(ai)   假设每个单词是独立的
+           
+           Bigram: (he is studing ai) = P(he) * P(is|he) * P(studing|is) * P(ai|studing)   假设当前单词只考虑与前一个单词相关
+           
+           Trigram: P(he is studing ai) = P(he) * p(is|he) * p(studing|he is) * P(ai| is studing)  假设当前单词与前两个单词相关
+           
+           N-gram        由Unigram、Bigram、Trigram可以延伸至N-gram,其中前三者是为了简化计算而假设得到的计算
 
        联合概率(joint probability)
        p(x1,x2） = p(x1) * p(x2|x1)  x1,x2的联合概率p(x1,x2) = 先验概率p(x1) * x1已知时x2的概率
@@ -100,5 +104,14 @@
     5. Dependency Parsing (依存分析）
     6. Relation Extraction(关系抽取）
 
-### 008 时间复杂度
+## 008 时间复杂度
 
+## 016  P、NP、NP Complete问题 
+
+## 017 问答系统
+    
+    将提问的问题于语料库中的问题进行匹配，包括基于规则的匹配和基于句子相似度的计算。
+    基于搜索的问答系统核心点：1.文本的表示 2.相似度的计算
+    知识图谱：1.实体抽取 2.关系抽取
+    
+![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/QA.PNG)

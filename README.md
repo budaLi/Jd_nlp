@@ -18,7 +18,7 @@
 
    1. 统计机器翻译
 
-![1.png](https://github.com/budaLi/jd_nlp/imgs/统计机器翻译_1.jpg)
+![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/%E7%BB%9F%E8%AE%A1%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91_1.jpg)
 
     传统的机器翻译为;根据语料库里的单词与其翻译一一对应形成词库，翻译时根据对应的词进行直译。
     缺点： 速度慢、无语义分析、无上下文环境

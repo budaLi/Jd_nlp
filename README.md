@@ -115,3 +115,21 @@
     知识图谱：1.实体抽取 2.关系抽取
     
 ![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/QA.PNG)
+
+# 2021.8.25 
+
+## 020 文本处理的流程
+
+    前向最大匹配，后向最大匹配
+   
+## 024 维特比算法
+
+![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/viterbi.png)
+
+    分词算法总结
+        1.基于匹配规则的方法  max matching
+        2.基于概率统计方法 LM(language model),HMM,CRF
+    分词可以认为是已经解决的问题
+    
+    需要掌握：
+        1.实现max matching 和 Unigram LM方法。

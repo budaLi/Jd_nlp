@@ -116,7 +116,7 @@
     
 ![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/QA.PNG)
 
-# 2021.8.25 
+# 2021.8.26
 
 ## 020 文本处理的流程
 
@@ -133,3 +133,14 @@
     
     需要掌握：
         1.实现max matching 和 Unigram LM方法。
+        
+        
+# 2021.8.30
+
+## 025 拼写错误纠正(spell correction)
+
+  电商、搜索引擎等需要进行拼写纠正，也叫编辑距离。
+  本质为动态规划。
+  
+  ![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/spell_correction.jpg)
+  

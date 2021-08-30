@@ -134,7 +134,54 @@
     需要掌握：
         1.实现max matching 和 Unigram LM方法。
         
-        
+   ```
+      # 前向最大匹配
+        def forward_max_mathcing(mathing_str,dic,max_len):
+            cur_start= 0
+            cur_end = max_len
+            res = []
+            while cur_end<=len(mathing_str) and cur_start<=cur_end:
+                cur_str = mathing_str[cur_start:cur_end]
+
+                if cur_str not in dic:
+                    cur_end -=1
+                else:
+                    res.append(cur_str)
+                    cur_start = cur_end
+                    cur_end = min(len(mathing_str),cur_end+max_len)
+                print(cur_start,cur_end,cur_str,res)
+            if cur_end!=len(mathing_str)-1:
+                print("no matching ")
+            else:
+                print(res)
+
+
+        dic = ["李","不搭","李不搭","武功","武功盖世","天下","第一","一"]
+        strs = "李不搭武功盖世天下第一"
+        max_len = 4
+        forward_max_mathcing(strs,dic,max_len)
+   ```
+   输出:
+   ```
+      0 3 李不搭武 []
+      3 7 李不搭 ['李不搭']
+      7 11 武功盖世 ['李不搭', '武功盖世']
+      7 10 天下第一 ['李不搭', '武功盖世']
+      7 9 天下第 ['李不搭', '武功盖世']
+      9 11 天下 ['李不搭', '武功盖世', '天下']
+      11 11 第一 ['李不搭', '武功盖世', '天下', '第一']
+      11 10  ['李不搭', '武功盖世', '天下', '第一']
+      ['李不搭', '武功盖世', '天下', '第一']
+
+   ```
+
+如果只是实现N-gram分词算法的话，意义不是很大，只是一种简单的数据处理方法(窗口取词算法)。
+
+可以基于一定的语料库，利用N-Gram来预计或者评估一个句子是否合理。
+
+可参考:https://www.codenong.com/cs106431277/
+
+
 # 2021.8.30
 
 ## 025 拼写错误纠正(spell correction)

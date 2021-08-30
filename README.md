@@ -191,3 +191,4 @@
   
   ![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/spell_correction.jpg)
   
+  [拼写纠错](https://github.com/budaLi/Jd_nlp/blob/main/codes/spell_correction.py)

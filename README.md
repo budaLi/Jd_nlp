@@ -256,3 +256,55 @@
         cos = S.minDistance(word1,word2)
         print(cos)
   ···
+  
+  
+  编辑距离的缺点：我们需要把词库中的每一个单词都去和用户输入计算编辑距离，时间复杂度较高，为O(V)*O(mn)，
+  
+  其中V为词库大小，mn为进行编辑距离计算的两个单词的长度。
+  
+  优化： 用户输入-> 生成与其编辑距离为1，2的字符串 -> 过滤 -> 返回
+  
+  
+  其中，如何过滤此处不做深究，后续仍需推导
+  
+  ![image](https://user-images.githubusercontent.com/31475416/131482290-355a80a5-c824-4bc0-a463-25c2129dd1e7.png)
+
+
+## 028 停用词过滤(Filtering Words)，Stemming操作
+
+  对应NLP的应用，我们通常先把停用词、出现频率很低的词汇过滤掉，这其实类似于特征筛选的过程。
+  
+  在英文里，比如"the","an","their"这些都可以作为停用词处理，但是，也要考虑自己的应用场景。
+  
+  比如在情感分析中,"好","很好"等不能过滤。
+  
+  词的标准化
+  
+    Stemming: one way to normalize  
+     
+          went,go,going       -> go
+          fly,flies           -> fli
+          deny,denied,denyig  -> denu
+          
+          "还原的单词不一定为单词,即不能保证还原为有效的原型"
+          
+![image](https://user-images.githubusercontent.com/31475416/131485124-a0953029-bba8-4c0b-af06-5e17dcf9a3e5.png)
+
+          
+    Lemmazation
+    
+        保证还原的单词一定符合英文语法，比stemming更为严格
+    
+    
+## 029 文本的表示
+
+one-hot 
+
+![image](https://user-images.githubusercontent.com/31475416/131486162-e0b87ce8-1a26-45c1-83cd-484b1758b952.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131486196-17b78d06-2292-4976-a17d-8c5b7f530202.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131486236-0576b853-9d9e-4276-9b81-d757d7c393e8.png)
+
+  
+  

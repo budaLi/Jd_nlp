@@ -192,3 +192,67 @@
   ![1.png](https://github.com/budaLi/Jd_nlp/blob/main/imgs/spell_correction.jpg)
   
   [拼写纠错](https://github.com/budaLi/Jd_nlp/blob/main/codes/spell_correction.py)
+  
+  
+  编辑距离 https://leetcode-cn.com/problems/edit-distance/comments/
+  
+  ![编辑距离](https://github.com/budaLi/Jd_nlp/blob/main/imgs/edit_distance.jpg)
+  
+  ···
+  
+      class Solution(object):
+            def minDistance(self, word1, word2):
+                """
+                :type word1: str
+                :type word2: str
+                :rtype: int
+                """
+                m = len(word1)
+                n = len(word2)
+                
+                # 如果word1或word2为空字符串
+                # 则编辑距离为长串的长度
+                
+                if m*n ==0:
+                    return m+n
+                # 初始化cost
+                
+                cost = [[0 for i in range(n+1)] for j in range(m+1) ]
+                print(cost)
+                
+                # 边界初始化
+                # word2为空
+                
+                for i in range(m+1):
+                    cost[i][0] = i
+                    
+                #word1 为空
+                
+                for j in range(n+1):
+                    cost[0][j] = j
+                print(cost)
+                for i in range(1,m+1):
+                    for j in range(1,n+1):
+                        if word1[i-1]==word2[j-1]:
+                            cost[i][j] = cost[i-1][j-1]
+                        else:
+                            #因为 cost[i-1][j-1] 与 cost[i-1][j] 以及 cost[i-1][j-1] 与 cost[i][j-1] 的绝对值之差为 1.
+                            
+                            # 假设 word1[i-1][j-1] 变换到 word2[i-1][j-1] 需要 k 步，
+                            
+                            # 那么 word1[i-1][j-1] 变换到 word[i-1][j] 则需要 k + 1 步，也可能是 k - 1 步。
+                            
+                            cost[i][j] = 1+min(cost[i-1][j-1],min(cost[i-1][j],cost[i][j-1]))
+                return cost[m][n]
+
+
+        S = Solution()
+        # word1 = "horse"
+        # word2 = "ros"
+        word1 = "intention"
+        word2 = "execution"
+        # word1 = "a"
+        # word2 = "b"
+        cos = S.minDistance(word1,word2)
+        print(cos)
+  ···

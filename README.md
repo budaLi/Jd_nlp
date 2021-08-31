@@ -308,3 +308,17 @@ one-hot
 
   
   
+## 031 tf-idf 
+
+![image](https://user-images.githubusercontent.com/31475416/131508626-2895891a-2b76-4bb2-a983-1417498349e8.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131510167-608d3770-821e-48b9-a255-f5e5dd12df64.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131511874-1ab92a99-0dc5-4a4b-9fbf-450f1c1c8466.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131512645-94f55380-5a15-4512-8019-22508f721d01.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131514379-d960fc59-8907-4f55-b11e-3ada3cf6ff60.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131515364-7a1b3d04-8750-414a-8303-098f3e4f4701.png)
+

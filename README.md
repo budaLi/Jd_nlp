@@ -1,8 +1,8 @@
-# 你不知道学什么，往往是因为你学的太少   
+# 贪心学院 NLP
 
 # 2021.8.25  
 
-人不能闲下来，闲着就会迷茫。时隔许久，尝试重新开始学习nlp,有时候觉得报班也挺好，人就是贱，付出了代价才知道努力。
+人不能闲下来，闲着就会迷茫...
 
 # 2021.8.25 
 
@@ -56,6 +56,8 @@
            
            Unigram: P(he is studing ai) = P(he) * P(is) * P(studing) * P(ai)   假设每个单词是独立的
            
+           Markov Assumption 马尔科夫假设
+           
            Bigram: (he is studing ai) = P(he) * P(is|he) * P(studing|is) * P(ai|studing)   假设当前单词只考虑与前一个单词相关
            
            Trigram: P(he is studing ai) = P(he) * p(is|he) * p(studing|he is) * P(ai| is studing)  假设当前单词与前两个单词相关
@@ -67,7 +69,7 @@
 
            p(x1,x2,x3,x4)
 
-          = p(x1)* p (x2|x1)* p(x3|x1,x2) *p(x4|x1,x2,x3)  # 为了简化，衍生出Unigram,Bigram,Trigram等
+          = p(x1)* p (x2|x1)* p(x3|x1,x2) *p(x4|x1,x2,x3)  # 为了简化，衍生出Unigram,Bigram,Trigram等  chain rule
 
           = p(x1,x2) * p(x3|x1,x2) * p(x4|x1,x2,x3)
 
@@ -321,4 +323,39 @@ one-hot
 ![image](https://user-images.githubusercontent.com/31475416/131514379-d960fc59-8907-4f55-b11e-3ada3cf6ff60.png)
 
 ![image](https://user-images.githubusercontent.com/31475416/131515364-7a1b3d04-8750-414a-8303-098f3e4f4701.png)
+
+
+## 034  倒排表
+
+基于检索的问答系统时间复杂度过高，用户的每次输入都要去QA库中计算问题的相似度才能返回。
+
+借鉴搜索引擎的思路，使用倒排索引。
+
+所有优化后的问答系统，可以根据关键词先对问答库进行大部分过滤，再进行相似度匹配。
+
+![image](https://user-images.githubusercontent.com/31475416/131630668-aa3cf036-2985-485d-a604-d66f0ee16842.png)
+
+## 035 Noisy Channel Model
+
+
+p(text|source) 等比例于 p(source|text)*p(text)
+
+可以理解为，给定一个资源source，需要将其转换为文本的形式，上述公式由贝叶斯得到，
+
+应用场景: 语音识别、机器翻译、拼写纠错、OCR、密码破解  -> 文本
+
+![image](https://user-images.githubusercontent.com/31475416/131635032-38d7ee55-6046-4576-916c-c3adcbd4814c.png)
+
+![image](https://user-images.githubusercontent.com/31475416/131635056-9d2d6349-0654-4c47-aeda-4b7b046b802d.png)
+
+
+## 036 语言模型
+
+语言模型用来判断一句话是否从语法上通顺。
+
+回顾unigram,bigram,N-gram.
+
+
+
+ 
 

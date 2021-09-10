@@ -385,3 +385,8 @@ p(text|source) 等比例于 p(source|text)*p(text)
   4. MF
   5. LSA
   6. LDA
+
+
+# 2021.9.10  
+
+  工作原因..暂时搁置,后续学习时从词性标注实战开始。
